@@ -1,6 +1,6 @@
 {
   "Tags":
   {
-    "awscodestar:projectArn":"arn:$PARTITION$:codestar:$AWS_REGION$:$ACCOUNT_ID$:project/$PROJECT_ID$"
+    "Lab" : "Codestar-lab6"
   }
 }

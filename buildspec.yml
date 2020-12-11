@@ -13,11 +13,9 @@ phases:
       - mvn clean compile test
   build:
     commands:
-      - echo Build started on `date`
+      - echo Entering build phase...
+      - echo Build commencing on `date`
       - mvn package shade:shade
-      - mv target/HelloWorld-1.0.jar .
-      - unzip HelloWorld-1.0.jar
-      - rm -rf target tst src buildspec.yml pom.xml HelloWorld-1.0.jar
       - aws cloudformation package --template template.yml --s3-bucket $S3_BUCKET --output-template template-export.yml
   post_build:
     commands:
